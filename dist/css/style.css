@@ -64,7 +64,7 @@ gap: 10px;
 
 /* Hero */
 .hero-box{
-  background-image: linear-gradient(rgba(78, 71, 71, 0.089), rgba(0, 0, 0, 0.199)),url(images/hero.webp);
+  background-image: linear-gradient(rgba(78, 71, 71, 0.089), rgba(0, 0, 0, 0.199)), url(assets/images/hero.webp);
   width: 100%;
   border-radius: 25px;
   padding: 70px 20px;
