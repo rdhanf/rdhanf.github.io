@@ -8,7 +8,7 @@
 
 .container {
   width: 80%;
-margin-inline: auto;
+  margin-inline: auto;
 }
 
 @media (max-width:992px) {.container {width: 90%;}
@@ -16,13 +16,13 @@ margin-inline: auto;
 
 /* Navbar */
 .navbar {
-  padding: 30px 0;
+  padding: 40px 0;
 }
 
 .navbar-box {
   display: flex;
-  justify-content: 
-  space-between;
+  justify-content:
+  space-between; 
   align-items: center;
 }
 
@@ -38,7 +38,8 @@ gap: 10px;
 }
 
 .logo img {
-  height: 80px;
+  width: 100px;
+  height: 100px;
 }
 
 .navbar-box .menu li{
@@ -63,11 +64,11 @@ gap: 10px;
 
 /* Hero */
 .hero-box{
-  background-image: linear-gradient(rgba(37, 36, 36, 0.089), rgba(0, 0, 0, 0.199)),url(/assets/images/hero.webp);
+  background-image: linear-gradient(rgba(78, 71, 71, 0.089), rgba(0, 0, 0, 0.199)),url(/assets/images/hero.webp);
   width: 100%;
   border-radius: 25px;
-  padding: 100px 20px;
-  color: white;
+  padding: 70px 20px;
+  color: rgb(248, 244, 244);
 }
  
 .hero-box h1 {
@@ -113,37 +114,169 @@ gap: 10px;
 /* Hero */
 
 /* Tentang */
+
 .tentang {
-  padding: 100px 0;
+  padding: 150px 0px;
+  background-color: #f9f9f9;
 }
 
-.tentang-box{
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax (15px, 1fr));
-  gap: 30px;
-  align-items: center;
-  text-align: justify;
+.tentang .container {
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-.tentang-box img{
-  width: 50%;
-  height: 80%;
+.tentang-box {
+  display: flex;
+  align-items: flex-start;
+  justify-content:baseline;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.tentang-box .box {
+  flex: 1;
+  min-width: 300px;
+}
+
+.tentang-box .box img {
+  width: 100%;
+  height: auto;
   border-radius: 20px;
+  object-fit: cover;
 }
 
-.tentang-box h1 {
- font-size: 40px;
- margin-bottom: 10px;
+/* Responsif untuk HP */
+@media screen and (max-width: 768px) {
+  .tentang-box {
+    flex-direction: column;
+    align-items: center;
+    text-align: justify;
+  }
+
+  .tentang-box .box {
+    width: 100%;
+  }
+
+  .tentang-box .box img {
+    max-width: 100%;
+    height: auto;
+  }
 }
 
-.tentang-box p {
-  padding-left: 10px;
-}
 /* Tentang */
+
+
+/* Galeri */
+.slider {
+  padding: 100px 0;
+  max-width: 300px;
+  
+}
+.slider{
+    width: 1000px;
+    max-width: 100vw;
+    height: 500px;
+    margin: auto;
+    position: relative;
+    overflow: hidden;
+    border-radius: 30px;
+    margin-bottom: 60px;
+    
+}
+.slider .list{
+    position: absolute;
+    width: max-content;
+    height: 100%;
+    left: 0;
+    top: 0;
+    display: flex;
+    transition: 1s;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 20px;
+}
+.slider .list img{
+    width: 1300px;
+    max-width: 70vw;
+    height: 100%;
+    object-fit: cover;
+}
+.slider .buttons{
+    position: absolute;
+    top: 45%;
+    left: 5%;
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+}
+.slider .buttons button{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: indigo;
+    color: white;
+    border: none;
+    font-family: monospace;
+    font-weight: bold;
+}
+.slider .dots{
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    color: #fff;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+.slider .dots li{
+    list-style: none;
+    width: 10px;
+    height: 10px;
+    background-color: #fff;
+    margin: 10px;
+    border-radius: 20px;
+    transition: 0.5s;
+}
+.slider .dots li.active{
+    width: 30px;
+}
+@media screen and (max-width: 768px){
+    .slider{
+    width: 100%;
+    height: 300px;
+    border-radius: 15px;
+    }
+  }
+
+  .slider .list img {
+    width: 100vw;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .slider .buttons button {
+    width: 40px;
+    height: 40px;
+    font-size: 16px;
+  }
+
+  .slider .dots li {
+    width: 8px;
+    height: 8px;
+    margin: 6px;
+  }
+
+  .slider .dots li.active {
+    width: 20px;
+  }
+
+
+/* Galeri */
 
 /* Akademik */
 .akademik {
-  padding-bottom: 150px;
+  padding-bottom: 100px;
 }
 
 .akademik-box {
@@ -154,13 +287,15 @@ gap: 10px;
 }
 
 .akademik-box .box {
-  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.1);
-  border-radius: 10px;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.473);
+  border-radius: 20px;
+  background: #fff; /* Tambahan untuk kejelasan */
+  overflow: hidden;
 }
 
 .akademik-box img{
-  width: 80%;
-  height: 50%;
+  width: 100%;
+  height: auto;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
 }
@@ -175,55 +310,71 @@ line-height: 2;
 
 @media (max-width: 575px){
   .akademik-box{
-    gap: 30px;
+    grid-template-columns: 1fr;
+    gap: 20px;
   }
+}
+  .akademik-box img {
+    width: 100%;
 }
 
 /* Akademik */
 
 /* PPDB */
-.ppdb {
-  padding-inline-starts: 50px;
-}
+.ppdb
 
 .ppdb-box {
-  display: grid;
+  display: grid ;
   grid-template-columns: repeat(2, 1fr);
-  gap: 40px;
-  align-items: start;
+  gap: 10px;
+  align-items: center;
   text-align: center;
 }
 
 .ppdb-box img {
   width: 100%;
+  height: auto;
   border-radius: 20px;
-  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.3)
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.377);
+ 
 }
 
-.ppdb-box h2{
-  margin-bottom: 10px;
+.ppdb-box img:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
+}
+.ppdb-box h2 {
+  margin-bottom: 20px;
+  margin-left: 20px;
 }
 
-.ppdb-box p{
+.ppdb-box p {
   line-height: 2;
   margin-bottom: 20px;
 }
 
-.ppdb-box a{
+.ppdb-box a {
   text-decoration: none;
   color: white;
-  background-color: rgb(139, 7, 233);
+  background-color:rgb(95, 2, 161);
   padding: 10px 20px;
   border-radius: 20px;
 }
 
 .ppdb-box a:hover {
-  background-color: rgb(100, 0, 171);
+  background-color: rgb(94, 3, 117);
 }
 
 @media (max-width: 768px){
   .ppdb-box{
+    grid-template-columns: 2fr;
+  }
+}
+
+@media (max-width: 575px){
+  .akademik-box{
     grid-template-columns: 1fr;
+    gap: 20px;
   }
 }
 /* PPDB */
@@ -272,7 +423,7 @@ font-size: 14;
 }
 
 .footer-box .social a:hover{
-  color: rgb(122, 10, 212);
+  color: indigo
 }
 
 .footer-box .box:nth-child(2) {
@@ -291,7 +442,7 @@ h2 {
 a {
   text-decoration: none;
   font-size: 14px;
-  color: indigo;
+  color: rgb(244, 242, 245);
 }
 
 .footer-box .box:nth-child(2)
@@ -329,10 +480,11 @@ a:hover{
 
 /* Scroll Up */
 .scroll-up {
-  width: 40px;
-  height: 40px;
-  background-color: rgb(161, 5, 192);
-  color: white;
+  padding: 10px 17px;
+  width: 50px;
+  height: 50px;
+  background-color: indigo;
+  color: rgb(247, 243, 243);
   border-radius: 100%;
   display: grid;
   place-items: center;
@@ -342,7 +494,8 @@ a:hover{
   opacity: 0;
 }
 
-.scroll-up.scroll-active{
+.scroll-up {
+  display: block;
   opacity: 1;
 }
 /* Scroll Up */
